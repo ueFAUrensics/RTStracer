@@ -1,0 +1,45 @@
+# @ file
+
+[Defines]
+  INF_VERSION         = 1.27
+  BASE_NAME           = RuntimeHooker
+  FILE_GUID           = b49ab95a-681c-43a3-b507-e5adb6092dd8
+  MODULE_TYPE         = DXE_RUNTIME_DRIVER
+  VERSION_STRING      = 1.0
+  ENTRY_POINT         = RuntimeHookerCommandInitialize
+
+[Sources]
+  RuntimeHooker.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  NetworkPkg/NetworkPkg.dec
+
+[LibraryClasses]
+  UefiDriverEntryPoint
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  DebugLib
+  UefiRuntimeLib
+  TcpIoLib
+  UefiLib
+  MemoryAllocationLib
+  BaseMemoryLib
+
+[Protocols]
+  gEfiTcp4ProtocolGuid                                  ## CONSUMES
+
+[DEPEX]
+  gEfiBdsArchProtocolGuid AND
+  gEfiCpuArchProtocolGuid AND
+  gEfiMetronomeArchProtocolGuid AND
+  gEfiMonotonicCounterArchProtocolGuid AND
+  gEfiRealTimeClockArchProtocolGuid AND
+  gEfiResetArchProtocolGuid AND
+  gEfiRuntimeArchProtocolGuid AND
+  gEfiSecurityArchProtocolGuid AND
+  gEfiTimerArchProtocolGuid AND
+  gEfiVariableWriteArchProtocolGuid AND
+  gEfiVariableArchProtocolGuid AND
+  gEfiWatchdogTimerArchProtocolGuid
+

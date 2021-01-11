@@ -1,5 +1,5 @@
 # RTStracer
-RTStracer is a proof-of-concept DXE-Driver for (OVMF)[https://github.com/tianocore/tianocore.github.io/wiki/OVMF] based on (EDK II)[https://github.com/tianocore/tianocore.github.io/wiki/EDK-II].
+RTStracer is a proof-of-concept DXE-Driver for [OVMF](https://github.com/tianocore/tianocore.github.io/wiki/OVMF) based on [EDK II](https://github.com/tianocore/tianocore.github.io/wiki/EDK-II).
 It traces Runtime Service (RTS) calls in UEFI and demonstrates how to persist code in the RTSs to execute code.
 
 ## Implementation
